@@ -2,11 +2,11 @@
 
 <form action="{{route('author.store') }}" method="post">
     @csrf
-    <label for="author">Author name</label>
+    <label for="name">Author name</label>
     <input type="text" name="name" id="">
-    <label for="author">Slug</label>
+    <label for="slug">Slug</label>
     <input type="text" name="slug" id="">
-    <label for="author">Bio</label>
+    <label for="bio">Bio</label>
     <input type="text" name="bio" id="">
     <button type="submit">Save</button>
 </form>
