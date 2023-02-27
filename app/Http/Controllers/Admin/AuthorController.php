@@ -37,4 +37,24 @@ class AuthorController extends Controller
         return redirect()->route('author.create');
 
     }
+
+    public function edit($id)
+    {
+        $author = Author::findOrFail($id);
+
+        return view('admin.createauthor', compact('author'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $author = Author::findOrFail($id);
+
+        $author->slug = $request->post('name');
+        $author->name = $request->post('slug');
+        $author->bio = $request->post('bio');
+        $author->save();
+
+        session()->flash('success_message','Author successfully added!');
+        return redirect()->route('author.edit', $id);
+    }
 }
