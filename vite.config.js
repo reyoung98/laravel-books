@@ -1,18 +1,23 @@
 import { defineConfig, loadEnv } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import react from '@vitejs/plugin-react';
  
 export default ({ mode }) => {
     const { APP_URL } = loadEnv(mode, process.cwd(), '')
  
     return defineConfig({
         plugins: [
+        
             laravel({
-                input: [
+                input: [            // compiling and watching 3 entry files
                     'resources/css/app.scss',
-                    'resources/js/app.js'
+                    'resources/js/app.js',
+                    'resources/js/partners.jsx',
                 ],
                 refresh: true,
             }),
+
+            react(),
             {
                 // fixes URLs that start with / in CSS files
                 // make sure to have vite.loadEnv imported and APP_URL defined
