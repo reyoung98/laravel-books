@@ -17,6 +17,7 @@ const getData = async () => {
         item.classList.add('book-card')
         item.innerHTML = `
                 <h3 class="title">${book.title}</h3>
+                <div class="authors">${book.authors.map(author=> author.name).join(', ')}</div>
                 <div class="book-info">
                     <div>
                         <img src="${book.image}">
