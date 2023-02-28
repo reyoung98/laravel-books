@@ -14,14 +14,14 @@ class AuthorController extends Controller
         ->limit(10)
         ->get();
 
-        // dd($authors);
-
         return view('admin.authors', compact('authors'));
     }
 
     public function create()
     {
-        return view('admin.createauthor');
+        $author = new Author;
+
+        return view('admin.createauthor', compact('author'));
     }
 
     public function store(Request $request)
