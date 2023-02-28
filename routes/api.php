@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// the prefix /api is automatic in this file (api.php) -- defined in Providers/RouteServiceProvider
+        // api/books/latest
+Route::get('/books/latest', [BookController::class, 'latest']);

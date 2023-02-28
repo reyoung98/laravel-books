@@ -5,7 +5,7 @@ const getData = async () => {
     // display the animated loader
     bookList.innerHTML = `<li class="loader"></li>`;
 
-    const response = await fetch('https://classes.codingbootcamp.cz/assets/classes/books-api/latest-books.php')
+    const response = await fetch('/api/books/latest')
     
     // hide the animated loader
     bookList.innerHTML= '';

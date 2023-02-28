@@ -68,4 +68,13 @@ class BookController extends Controller
 
         return redirect()->route('book.edit', $id);
     }
+
+    public function latest()
+    {
+        $latestBooks = Book::orderBy('publication_date', 'desc')
+        ->limit(10)
+        ->get();
+
+        return($latestBooks);
+    }
 }
