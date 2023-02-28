@@ -9,7 +9,15 @@
 
     <div id="partners"></div>
 
+    
     @viteReactRefresh
-    @vite('resources/js/partners.jsx')      
+    @vite('resources/js/partners.jsx') 
+    
+    <div class="container">
+        <h1 class="page-title">Latest Books</h1>
+        <div id="latest-books"></div>
+    </div>
+    
+    @vite('resources/js/latest-books.js')
 
 @endsection

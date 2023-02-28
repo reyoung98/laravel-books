@@ -9,9 +9,11 @@ export default ({ mode }) => {
         plugins: [
         
             laravel({
-                input: [            // compiling and watching 3 entry files
+                input: [            // compiling and watching entry files:
                     'resources/css/app.scss',
+                    'resources/css/admin/admin.scss',
                     'resources/js/app.js',
+                    'resources/js/latest-books.js',
                     'resources/js/partners.jsx',
                 ],
                 refresh: true,

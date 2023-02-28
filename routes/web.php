@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Api\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use App\Http\Controllers\AboutController;
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/about', [AboutController::class, 'index'])->name('about-us');
+
+Route::get('/api/test/array', [TestController::class, 'arrayResponse']);
+Route::get('/api/test/model', [TestController::class, 'modelResponse']);
+Route::get('/api/test/collection', [TestController::class, 'collectionResponse']);
