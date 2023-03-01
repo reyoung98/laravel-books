@@ -1,0 +1,35 @@
+#book-detail {
+    display: flex;
+    padding-top: 4rem;
+
+    .book-info {
+        padding-left: 2rem;
+    }
+
+    img {
+        height: 400px;
+        width: 270px;
+        object-fit: cover;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        letter-spacing: .02rem;
+        font-weight: 600;
+    }
+
+    .pages {
+        font-weight: 300;
+        color: #444;
+    }
+
+    .category {
+        color: rgb(13, 141, 184);
+        border: 1px solid lightblue;
+        padding: .3rem;
+        border-radius: 3px;
+    }
+
+    
+}
