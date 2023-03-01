@@ -1,0 +1,21 @@
+#admin-content {
+    display: flex;
+    min-height: 100vh;
+}
+
+#admin-menu {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 180px;
+    box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
+}
+
+.side-link {
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+
+.admin-main {
+    padding: 0 3rem;
+}

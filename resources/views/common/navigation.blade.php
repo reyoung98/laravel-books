@@ -1,13 +1,13 @@
 <nav>
-    <a href="{{ route('homepage') }}" @if($current_menu_item === 'homepage') class='selected' @endif>
+    <a class="menu-item" href="{{ route('homepage') }}" @if($current_menu_item === 'homepage') class='selected' @endif>
         Home 
     </a>
-    <a href="{{ route('about-us') }}" @if($current_menu_item === 'about-us') class='selected' @endif>
+    <a class="menu-item" href="{{ route('about-us') }}" @if($current_menu_item === 'about-us') class='selected' @endif>
         About
     </a>
 
     @can('admin')
-        <a href="{{route('books.index')}}">Admin</a>
+        <a class="menu-item" href="{{route('books.index')}}">Admin</a>
     @endcan
 
     @guest
@@ -17,7 +17,7 @@
 
     @auth
 
-    Logged in as {{ auth()->user()->email }}
+    <span>Logged in as <a href="/home"> {{ auth()->user()->email }}</a></span>
 
         <form action="{{ route('logout') }}" method="post">
             @csrf

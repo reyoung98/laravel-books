@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('content')
+
 <h1>Add new author</h1>
 
 @if (is_null($author->id)) 
@@ -17,3 +21,5 @@
     <input type="text" name="bio" id="" value="{{ old('bio', $author->bio) }}">
     <button type="submit">Save</button>
 </form>
+
+@endsection

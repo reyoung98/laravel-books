@@ -1,3 +1,7 @@
+@extends('layouts.admin')
+
+@section('content')
+
 <h1>Add new book</h1>
 
 @if (is_null($book->id)) 
@@ -19,3 +23,5 @@
     <textarea name="description" id="">{{ old('description', $book->description) }}></textarea>
     <button type="submit">Save</button>
 </form>
+
+@endsection

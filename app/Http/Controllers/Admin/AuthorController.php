@@ -14,14 +14,14 @@ class AuthorController extends Controller
         ->limit(10)
         ->get();
 
-        return view('admin.authors', compact('authors'));
+        return view('admin.authors.index', compact('authors'));
     }
 
     public function create()
     {
         $author = new Author;
 
-        return view('admin.createauthor', compact('author'));
+        return view('admin.authors.create', compact('author'));
     }
 
     public function store(Request $request)
@@ -42,7 +42,7 @@ class AuthorController extends Controller
     {
         $author = Author::findOrFail($id);
 
-        return view('admin.createauthor', compact('author'));
+        return view('admin.authors.create', compact('author'));
     }
 
     public function update(Request $request, $id)

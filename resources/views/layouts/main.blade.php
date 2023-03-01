@@ -17,8 +17,8 @@
     ])
 
     @include('common.alerts')
-    
-    <main>
+
+    <main id="main-content">
         @yield('content')
     </main>
     

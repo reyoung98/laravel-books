@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>Welcome home, {{ $user->name }}</h1>
+<h1>Welcome to your profile, {{ $user->name }}</h1>
 
 @endsection

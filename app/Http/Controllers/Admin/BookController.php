@@ -15,14 +15,14 @@ class BookController extends Controller
         ->limit(10)
         ->get();
 
-        return view('admin.books', compact('books'));
+        return view('admin.books.index', compact('books'));
     }
 
     public function create()
     {
         $book = new Book;
 
-        return view('admin.createbook', compact('book'));
+        return view('admin.books.create', compact('book'));
     }
 
     public function store(Request $request)
@@ -47,7 +47,7 @@ class BookController extends Controller
     {
         $book = Book::findOrFail($id);
 
-        return view('admin.createbook', compact('book'));
+        return view('admin.books.create', compact('book'));
     }
 
     public function update(Request $request, $id)

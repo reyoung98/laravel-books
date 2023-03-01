@@ -9,10 +9,10 @@
 </head>
 <body>
 
-    {{-- @include('common.navigation', [
-        'current_menu_item' => $current_menu_item
-    ]) --}}
-    <main>
+    @include('common.navigation', [
+        'current_menu_item' => $current_menu_item ?? null
+    ])
+    <main id="admin-content">
         @yield('content')
     </main>
     

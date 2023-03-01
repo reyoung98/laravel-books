@@ -10,7 +10,11 @@
     <p class="pages">{{ $book->pages }} pages 	&#8226; Published {{ date('Y', strtotime($book->publication_date)) }}</p>
     <span class="category">{{ $book->categories->name }}</span>
     <div class="description">{{ strip_tags($book->description) }} ...</div>
-    <button>Add a review</button>
+    <div class="ctas">
+        <button>Add review</button>
+        <button>Add to reading list</button>
+        <button>Reserve book</button>
+    </div>
 </div>
 
 
