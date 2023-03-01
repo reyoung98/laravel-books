@@ -6,6 +6,10 @@
         About
     </a>
 
+    @can('admin')
+        <a href="{{route('books.index')}}">Admin</a>
+    @endcan
+
     @guest
         <a href="{{ route('login') }}">Log in</a> 
         <a href="{{ route('register') }} ">Register</a>             <!-- name of route as defined by Fortify -->
@@ -13,7 +17,7 @@
 
     @auth
 
-    {{-- Logged in as {{ auth()->user()->email }} --}}
+    Logged in as {{ auth()->user()->email }}
 
         <form action="{{ route('logout') }}" method="post">
             @csrf

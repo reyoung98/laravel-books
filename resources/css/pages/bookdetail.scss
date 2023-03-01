@@ -3,7 +3,9 @@
     padding-top: 4rem;
 
     .book-info {
+        position: relative;
         padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     img {
@@ -31,5 +33,22 @@
         border-radius: 3px;
     }
 
+    .description {
+        margin-top: 2rem;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0;
+        border: 0;
+        margin: 1rem 0;
+        padding: .5rem 2rem;
+        border-radius: 3px;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: plum;
+        }
+    }
     
 }
