@@ -18,4 +18,16 @@ class BookController extends Controller
 
         return($latestBooks);
     }
+
+    public function search(Request $request) 
+    {
+       $search = $request->query('search');
+ 
+       $results = Book::where('title', 'like', "%{$search}%")
+       ->orderBy('publication_date', 'desc')
+       ->limit(5)
+       ->get();
+ 
+       return $results;
+    }
 }

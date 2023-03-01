@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="form-container">
+<h2>LOG IN</h2>
 <form action="{{ route('login') }}" method="post">
  
     @csrf
@@ -11,7 +13,8 @@
     <input type="password" name="password" value="">
  
     <button>Login</button>
- 
+    
 </form>
+</div>
 
 @endsection

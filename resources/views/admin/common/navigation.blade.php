@@ -11,7 +11,7 @@
 
     @auth
 
-    <div>Logged in as <a href="/home"> {{ auth()->user()->email }}</a></div>
+    <a href="/home"> {{ auth()->user()->email }}</a>
 
         <form action="{{ route('logout') }}" method="post">
             @csrf

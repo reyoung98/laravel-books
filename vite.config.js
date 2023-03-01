@@ -14,6 +14,7 @@ export default ({ mode }) => {
                     'resources/css/admin/admin.scss',
                     'resources/js/app.js',
                     'resources/js/latest-books.js',
+                    'resources/js/search/book-search.js',
                     'resources/js/partners.jsx',
                     'resources/js/user-list/user-list.jsx'
                 ],

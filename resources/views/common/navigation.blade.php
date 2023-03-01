@@ -9,15 +9,18 @@
     @can('admin')
         <a class="menu-item" href="{{route('books.index')}}">Admin</a>
     @endcan
-
+    
+    @include('common.search')
+    
     @guest
-        <a href="{{ route('login') }}">Log in</a> 
-        <a href="{{ route('register') }} ">Register</a>             <!-- name of route as defined by Fortify -->
+        <a class="menu-link" href="{{ route('login') }}">Log in</a> 
+        <a class="menu-btn" href="{{ route('register') }}"><button>Sign up</button></a>             <!-- name of route as defined by Fortify -->
     @endguest
+
 
     @auth
 
-    <span>Logged in as <a href="/home"> {{ auth()->user()->email }}</a></span>
+        <div class="username"><a href="/home"> {{ auth()->user()->email }}</a></div>
 
         <form action="{{ route('logout') }}" method="post">
             @csrf

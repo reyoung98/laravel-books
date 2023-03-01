@@ -26,3 +26,5 @@ Route::get('/books/latest', [BookController::class, 'latest']);
 
     // path is actually api/users
 Route::get('/users', [UserController::class, 'index']);
+
+Route::get('/books/search', [BookController::class, 'search']);
