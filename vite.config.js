@@ -15,6 +15,7 @@ export default ({ mode }) => {
                     'resources/js/app.js',
                     'resources/js/latest-books.js',
                     'resources/js/partners.jsx',
+                    'resources/js/user-list/user-list.jsx'
                 ],
                 refresh: true,
             }),
