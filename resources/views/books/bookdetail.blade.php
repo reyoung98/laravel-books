@@ -4,6 +4,7 @@
 
 <div id="book-detail">
     <img src="{{$book->image}}" alt="{{$book->title}}">
+    <div class="book-container">
     <div class="book-info">
         <h2>{{$book->title}}</h2>
         <p>{{ $book->authors->pluck('name')->join(', ') }} </p>
@@ -31,18 +32,32 @@
             @endauth
         </div>
     </div>
+
+    <div id="reviews-section">
+        @if($reviews->count() > 0)
+            <h3>Community Reviews</h3>
+            @foreach($reviews as $review)
+            <div class="review-container">
+                <div>{{$review->text}}</div>
+            </div>
+            @endforeach
+        @endif
+    </div>
+    
+    @auth
+       <div id="review-form">
+            @include('common.alerts')
+        
+            <h3>Write a review</h3> 
+            <form action="{{ route('review.save', $book->id) }}" method="post">
+                @csrf
+                <textarea name="review" id="" cols="30" rows="10"></textarea>
+               <button>Submit review</button>
+            </form>
+       </div>
+    @endauth
+</div>
 </div>
 
-@auth
-
-    @include('common.alerts')
-
-    <h3>Write a review</h3> 
-    <form action="{{ route('review.save', $book->id) }}" method="post">
-        @csrf
-        <textarea name="review" id="" cols="30" rows="10"></textarea>
-       <button>Submit review</button>
-    </form>
-@endauth
 
 @endsection

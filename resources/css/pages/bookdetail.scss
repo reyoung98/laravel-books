@@ -1,11 +1,15 @@
+.book-container {
+    padding: 0 2rem;
+}
+
 #book-detail {
     display: flex;
     padding-top: 4rem;
 
     .book-info {
         position: relative;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
     }
 
     img {
@@ -34,13 +38,13 @@
     }
 
     .description {
-        margin-top: 2rem;
+        margin: 2rem 0;
     }
 
     .ctas {
-        position: absolute;
+        // position: absolute;
         display: flex;
-        bottom: 0;
+        // bottom: 0;
 
         button {
             cursor: pointer;
@@ -54,13 +58,49 @@
                 background-color: plum;
             }
 
-        &.green {
-            background-color: #d0f0c0;
+            &.green {
+                background-color: #d0f0c0;
 
-            &:hover {
-                background-color: plum;
+                &:hover {
+                    background-color: plum;
+                }
             }
         }
+    }
+}
+
+#reviews-section {
+    .review-container {
+        padding: 1rem;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 3px;
+        margin-bottom: 1rem;
+        
+    }
+}
+
+#review-form {
+
+    margin-top: 2rem;
+  form {
+      display: flex;
+      flex-direction: column;
+  }
+    textarea {
+        border: 2px solid rgba(0,0,0,.1);
+        border-radius: 3px;
+    }
+
+    button {
+        cursor: pointer;
+        width: 200px;
+        border: 0;
+        margin: 2rem 0;
+        padding: .5rem;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: plum;
         }
     }
 }

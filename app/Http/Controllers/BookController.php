@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\BookUser;
+use App\Models\Review;
 
 class BookController extends Controller
 {
@@ -17,7 +18,9 @@ class BookController extends Controller
        ->where('book_id', $bookId)
        ->first();
 
-       return view('books.bookdetail', compact('book', 'bookUser'));
+       $reviews = Review::where('book_id', $bookId)->get();
+
+       return view('books.bookdetail', compact('book', 'bookUser', 'reviews'));
    }
 
    public function addToReadingList($bookId)
