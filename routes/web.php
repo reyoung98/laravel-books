@@ -25,6 +25,10 @@ Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('
 
 Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book_detail');
 
+// testing with api
 Route::get('/api/test/array', [TestController::class, 'arrayResponse']);
 Route::get('/api/test/model', [TestController::class, 'modelResponse']);
 Route::get('/api/test/collection', [TestController::class, 'collectionResponse']);
+
+Route::post('/book/add/{book_id}', [BookController::class, 'addToReadingList'])->name('reading_list');
+Route::post('/book/reserve/{book_id}', [BookController::class, 'reserveBook'])->name('reserve_book');

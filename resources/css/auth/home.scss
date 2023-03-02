@@ -1,0 +1,30 @@
+#reading-list,
+#reservation-list {
+
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+
+    .book-item {
+        margin: 0 1rem;
+        display: flex;
+        text-decoration: none;
+        color: #2e3440;
+
+        &:hover {
+            color: darkmagenta;
+        }
+
+        img {
+            width: 180px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+        }
+
+        .book-title {
+            padding: 0 1rem;
+        }
+    }
+}

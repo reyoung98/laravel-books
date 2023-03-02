@@ -39,11 +39,13 @@
 
     .ctas {
         position: absolute;
+        display: flex;
         bottom: 0;
 
         button {
+            cursor: pointer;
             border: 0;
-            margin: 1rem 0;
+            margin-right: 1rem;
             padding: 0.5rem 2rem;
             border-radius: 3px;
             white-space: nowrap;
@@ -51,6 +53,14 @@
             &:hover {
                 background-color: plum;
             }
+
+        &.green {
+            background-color: #d0f0c0;
+
+            &:hover {
+                background-color: plum;
+            }
+        }
         }
     }
 }
