@@ -16,7 +16,7 @@
         'current_menu_item' => $current_menu_item ?? null
     ])
 
-    @include('common.alerts')
+    {{-- @include('common.alerts') --}}
 
     <main id="main-content">
         @yield('content')

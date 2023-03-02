@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/about', [AboutController::class, 'index'])->name('about-us');
 Route::get('/home', [HomeController::class, 'home'])->middleware('auth')->name('home');
 
 Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book_detail');
+Route::post('/book/{book_id}/review', [ReviewController::class, 'save'])->name('review.save');
 
 // testing with api
 Route::get('/api/test/array', [TestController::class, 'arrayResponse']);
