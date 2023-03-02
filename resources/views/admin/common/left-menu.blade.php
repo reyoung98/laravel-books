@@ -8,4 +8,7 @@
     <a class="side-link" href="{{ route('admin.users') }}" >
         Users
     </a>
+    <a class="side-link" href="{{ route('admin.reservations') }}" >
+        Reservations
+    </a>
 </div>

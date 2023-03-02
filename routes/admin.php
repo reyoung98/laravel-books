@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthorController;
 use App\Http\Controllers\Admin\BookController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\ReservationController;
 
 Route::middleware('can:admin')->group(function() {
     
@@ -23,5 +24,6 @@ Route::middleware('can:admin')->group(function() {
 
     // users
     Route::get('/admin/users', [UserController::class, 'index'])->name('admin.users');
+    Route::get('/admin/reservations', [ReservationController::class, 'index'])->name('admin.reservations');
 });
 

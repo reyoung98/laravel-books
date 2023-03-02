@@ -32,9 +32,12 @@ class BookController extends Controller
             'book_id' => $bookId,
             'onReadingList' => true
         ]);
+            $record->timestamps = false;
+            $record->created_at = now();
             $record->save();
          } else {
             $record->onReadingList = !$record->onReadingList;
+            $record->timestamps = false;
             $record->save();
          }
 

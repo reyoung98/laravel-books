@@ -7,7 +7,7 @@
     padding-top: 1rem;
     display: flex;
     flex-direction: column;
-    flex-basis: 180px;
+    min-width: 180px;    
     box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
 }
 
@@ -19,3 +19,5 @@
 .admin-main {
     padding: 0 3rem;
 }
+
+@import 'pages/reservations.scss';

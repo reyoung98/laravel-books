@@ -1,0 +1,23 @@
+.reserved-item {
+    display: flex;
+    margin-bottom: 1rem;
+    text-decoration: none;
+
+    img {
+        width: 80px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 3px;
+        box-shadow: 0 .1rem .2rem rgba(0,0,0,.2);
+    }
+
+    .reservation-info {
+        margin-left: 1.5rem;
+        color: #2e3440;
+
+        &:hover {
+            color: darkmagenta;
+        }
+    }
+   
+}
