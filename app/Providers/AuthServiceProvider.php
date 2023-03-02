@@ -22,7 +22,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('admin', function($user) {
-            return $user->id == 1;  // some logic to determine who can access this gate (email, regular expression, id, etc.)
+            return $user->role == 'admin';  // some logic to determine who can access this gate (email, regular expression, id, etc.)
         });
     }
 }
