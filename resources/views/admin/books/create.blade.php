@@ -2,6 +2,8 @@
 
 @section('content')
 
+@include('admin.common.left-menu')
+
 <h1>Add new book</h1>
 
 @if (is_null($book->id)) 

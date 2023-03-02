@@ -1,9 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
+@include('admin.common.left-menu')
 
-{{-- Div with id ROOT for react application --}}
-<div id="root"></div>
+<div class="admin-main">
+    {{-- Div with id ROOT for react application --}}
+    <div id="root"></div>
+</div>
 
 @viteReactRefresh
 @vite('resources/js/user-list/user-list.jsx')
