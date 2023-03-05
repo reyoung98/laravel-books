@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="form-container">
+<div class="auth-form-container">
     <h2>SIGN UP</h2>
 <form action="{{ route('register') }}" method="post">
  
