@@ -1,4 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.admin', [
+    'current_menu_item' => 'admin'
+])
 
 @section('content')
 

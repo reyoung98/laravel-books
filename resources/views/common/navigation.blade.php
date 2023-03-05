@@ -1,13 +1,13 @@
 <nav>
-    <a class="menu-item" href="{{ route('homepage') }}" @if($current_menu_item === 'homepage') class='selected' @endif>
+    <a class="menu-item {{ $current_menu_item === 'homepage' ? 'selected' : '' }}" href="{{ route('homepage') }}">
         Home 
     </a>
-    <a class="menu-item" href="{{ route('about-us') }}" @if($current_menu_item === 'about-us') class='selected' @endif>
+    <a class="menu-item {{ $current_menu_item === 'about-us' ? 'selected' : '' }}" href="{{ route('about-us') }}">
         About
     </a>
 
     @can('admin')
-        <a class="menu-item" href="{{route('books.index')}}">Admin</a>
+        <a class="menu-item {{ $current_menu_item === 'admin' ? 'selected' : '' }}" href="{{route('books.index')}}">Admin</a>
     @endcan
     
     @include('common.search')
