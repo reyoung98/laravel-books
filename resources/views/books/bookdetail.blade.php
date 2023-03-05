@@ -39,6 +39,7 @@
             @foreach($reviews as $review)
             <div class="review-container">
                 <div>{{$review->text}}</div>
+                <div><i>- {{$review->user->name}}</i></div>
             </div>
             @endforeach
         @endif

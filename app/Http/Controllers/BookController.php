@@ -18,7 +18,9 @@ class BookController extends Controller
        ->where('book_id', $bookId)
        ->first();
 
-       $reviews = Review::where('book_id', $bookId)->get();
+       $reviews = Review::where('book_id', $bookId)
+       ->with('user')
+       ->get();
 
        return view('books.bookdetail', compact('book', 'bookUser', 'reviews'));
    }
@@ -44,11 +46,6 @@ class BookController extends Controller
             $record->save();
          }
 
-         // if($record->onReadingList) {
-         //    session()->flash('success_message','Book added to reading list!');
-         // } else {
-         //    session()->flash('success_message','Book removed from reading list!');
-         // }
          return redirect()->route('book_detail', $bookId);
       
    }
@@ -71,11 +68,6 @@ class BookController extends Controller
          $record->save();
       }
 
-      // if($record->onReadingList) {
-      //    session()->flash('success_message','Book added to reading list!');
-      // } else {
-      //    session()->flash('success_message','Book removed from reading list!');
-      // }
       return redirect()->route('book_detail', $bookId);
    }
 
