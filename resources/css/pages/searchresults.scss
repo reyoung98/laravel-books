@@ -6,7 +6,7 @@
 
         img {
             width: 130px;
-            height: 160px;
+            height: 180px;
             object-fit: cover;
             border-radius: 3px;
             box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
@@ -22,7 +22,22 @@
         } 
 
         .author {
-            font-style: italic;
+            font-weight: 300;
+            margin: .5rem 0;
+        }
+
+        .pages {
+            font-weight: 300;
+            color: #444;
+            margin: .5rem 0;
+        }
+    
+        .category {
+            font-size: .8rem;
+            color: rgb(13, 141, 184);
+            border: 1px solid lightblue;
+            padding: 0.3rem;
+            border-radius: 3px;
         }
     }
 }

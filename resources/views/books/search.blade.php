@@ -15,6 +15,8 @@
                     <div class="author">
                         {{ $result->authors->pluck('name')->join(', ') }}
                     </div>
+                    <p class="pages">{{ $result->pages }} pages 	&#8226; Published {{ date('Y', strtotime($result->publication_date)) }}</p>
+                    <span class="category">{{ $result->categories->name }}</span>
                 </div>
             </a>
     @endforeach
