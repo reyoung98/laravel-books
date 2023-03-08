@@ -12,10 +12,13 @@ html {
     margin: 0 auto;
 }
 
-
+.page-title {
+    margin: 2.5rem 0;
+}
 
 @import 'pages/index.scss';
 @import 'pages/bookdetail.scss';
+@import 'pages/searchresults.scss';
 @import 'auth/forms.scss';
 @import 'common/navigation.scss';
 @import 'common/search.scss';

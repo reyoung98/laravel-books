@@ -1,0 +1,28 @@
+#search-results {
+    .book-item {
+        display: flex;
+        margin-bottom: 1rem;
+        text-decoration: none;
+
+        img {
+            width: 130px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 3px;
+            box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+        }
+
+        .book-info {
+            margin-left: 1.5rem;
+            color: #2e3440;
+    
+            &:hover {
+                color: darkmagenta;
+            }
+        } 
+
+        .author {
+            font-style: italic;
+        }
+    }
+}

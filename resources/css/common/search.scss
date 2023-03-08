@@ -1,49 +1,62 @@
 .search-container {
     position: relative;
 
-
-#book-search {
-    width: 250px;
-    padding: .3rem 1rem;
-    margin: 0 2rem;
-}
-
-.search-results-outer {
-    display: none;
-    position: absolute;
-    margin: 0 2rem;
-    top: 30px;
-    background-color: white;
-    width: 250px;
-    border-radius: 5px;
-    padding: 1rem;
-    box-shadow: 0 .2rem .2rem rgba(0,0,0,.2);
-    z-index: 10;
-}
-
-.book-item {
-    text-decoration: none;
-    color: #2e3440;
-    display: flex;
-    padding: .5rem 0;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-
-    &:hover {
-        color: darkmagenta;
+    #book-search {
+        width: 250px;
+        padding: 0.3rem 1rem;
+        margin: 0 2rem;
     }
 
-    img {
-        width:50px;
-        height: 80px;
-        object-fit: cover;
-        align-self: center;
-        border-radius: 3px;
-        box-shadow: 0 .2rem .2rem rgba(0,0,0,.2);
+    .search-results-outer {
+        display: none;
+        position: absolute;
+        margin: 0 2rem;
+        top: 30px;
+        background-color: white;
+        width: 250px;
+        border-radius: 5px;
+        padding: 1rem;
+        box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+        z-index: 10;
+
+        .see-more {
+            border: none;
+            background-color: transparent;
+            color: #2e3440;
+            margin: 0;
+            margin-top: 1rem;
+            padding: 0;
+            font-size: 1rem; 
+
+            &:hover {
+                color: darkmagenta;
+            }
+        }
     }
 
-    p {
-        margin-top: 0;
-        padding-left: 1rem;
+    .book-item {
+        text-decoration: none;
+        color: #2e3440;
+        display: flex;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            color: darkmagenta;
+        }
+
+        img {
+            width: 50px;
+            height: 80px;
+            object-fit: cover;
+            align-self: center;
+            border-radius: 3px;
+            box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            margin-top: 0;
+            padding-left: 1rem;
+        }
     }
-}
 }

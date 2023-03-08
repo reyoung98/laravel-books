@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\TestController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,9 +29,11 @@ Route::get('/book/{book_id}', [BookController::class, 'show'])->name('book_detai
 Route::post('/book/{book_id}/review', [ReviewController::class, 'save'])->name('review.save');
 
 // testing with api
-Route::get('/api/test/array', [TestController::class, 'arrayResponse']);
-Route::get('/api/test/model', [TestController::class, 'modelResponse']);
-Route::get('/api/test/collection', [TestController::class, 'collectionResponse']);
+// Route::get('/api/test/array', [TestController::class, 'arrayResponse']);
+// Route::get('/api/test/model', [TestController::class, 'modelResponse']);
+// Route::get('/api/test/collection', [TestController::class, 'collectionResponse']);
 
 Route::post('/book/add/{book_id}', [BookController::class, 'addToReadingList'])->name('reading_list');
 Route::post('/book/reserve/{book_id}', [BookController::class, 'reserveBook'])->name('reserve_book');
+
+Route::get('/search', [SearchController::class, 'showResults'])->name('search-results');

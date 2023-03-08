@@ -12,7 +12,7 @@ class Book extends Model
     // defining a relationship
     public function authors()
     {
-        return $this->belongsToMany(Author::class); // no need to use Author class, in same namespace
+        return $this->belongsToMany(Author::class); // no need to 'use' Author class, in same namespace
     }
 
     public function publishers()
@@ -25,8 +25,8 @@ class Book extends Model
         return $this->belongsTo(Category::class, 'category_1_id'); 
     }
 
-    public function books()
-    {
-        return $this->belongsToMany(Book::class); 
-    }
+    // public function books()
+    // {
+    //     return $this->belongsToMany(Book::class); 
+    // }
 }
