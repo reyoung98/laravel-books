@@ -30,4 +30,21 @@ class BookController extends Controller
  
        return $results;
     }
+
+    // public function getMoreBooks(Request $request)
+    // {
+    //     $input = $request->input();
+    //     $query = $input['q'];
+    //     $count = $input['count'];
+
+    //     $results = Book::where('title', 'like', "%{$query}%")
+    //         ->orderBy('publication_date', 'desc')
+    //         ->with('authors')
+    //         ->offset($count)
+    //         ->limit(15)
+    //         ->get();
+
+    //     return response()->json($results);
+    // }
+    
 }

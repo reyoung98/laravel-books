@@ -1,8 +1,40 @@
 #search-results {
+
+    .pagination {
+        display: flex;
+        gap: 1rem;
+
+    .pagination-btn {
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 3px;
+        margin-bottom: 2rem;
+        
+        &:not([disabled]) {
+            cursor: pointer;
+        }
+
+        &:hover:not([disabled]) {
+            background-color: darkmagenta;
+            color: white;
+        }
+    }
+}
+
     .book-item {
         display: flex;
         margin-bottom: 1rem;
         text-decoration: none;
+
+        &:hover {
+            img {
+                opacity: .8;
+            }
+
+            .book-info {
+                color: darkmagenta;
+            }
+        }
 
         img {
             width: 130px;
@@ -15,10 +47,6 @@
         .book-info {
             margin-left: 1.5rem;
             color: #2e3440;
-    
-            &:hover {
-                color: darkmagenta;
-            }
         } 
 
         .author {
