@@ -27,13 +27,13 @@
         {{-- @if ($page > 0) --}}
             <form method="get" action="{{ route('search-results') }}">
                 <input type="hidden" name="q" value="{{ $query }}">
-                <input type="hidden" name="page" value="{{ 0 }}">
-                <button class="pagination-btn" type="submit" {{ $page == 0 ? 'disabled' : '' }}>First</button>
+                <input type="hidden" name="page" value="{{ 1 }}">
+                <button class="pagination-btn" type="submit" {{ $page == 1 ? 'disabled' : '' }}>First</button>
             </form>
             <form method="get" action="{{ route('search-results') }}">
                 <input type="hidden" name="q" value="{{ $query }}">
                 <input type="hidden" name="page" value="{{ $page - 1 }}">
-                <button class="pagination-btn" type="submit" {{ $page == 0 ? 'disabled' : '' }}>Previous</button>
+                <button class="pagination-btn" type="submit" {{ $page == 1 ? 'disabled' : '' }}>Previous</button>
             </form>
         {{-- @endif --}}
     
