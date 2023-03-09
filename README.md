@@ -4,6 +4,8 @@ This app is designed for an entity such as a library which needs to manage its c
 
 ### Features
 - Any visitor can browse and search for books from the library's database. 
+- Text search with preview as well as full results page with pagination to see all matching results.
+- Each book has a book detail page with a detailed description and user reviews.
 - Users can create an account and log in.
 - Registered users can save books to their reading list, reserve a book, and write reviews for books. 
 - Book reviews are visible to all users.
