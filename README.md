@@ -1,6 +1,6 @@
-## Book App
+# Book App
 
-This app is designed for an entity such as a library which needs to manage its catalogue of books. 
+This app is designed for an entity such as a library which needs to manage its catalogue of books. Built with Laravel.
 
 ### Features
 - Any visitor can browse and search for books from the library's database. 
@@ -13,3 +13,15 @@ This app is designed for an entity such as a library which needs to manage its c
     - View users
     - View book reservations
     - Add books and authors to the database through a form
+    
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/59955748/224178393-1537cab7-4d67-43ac-8f1e-d8d135d41301.png">
+
+---
+
+<img width="1200" alt="image" src="https://user-images.githubusercontent.com/59955748/224178748-74dab2d7-6c67-446e-880f-925526741bda.png">
+
+
+
+
+
+
